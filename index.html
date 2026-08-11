@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>楊紫筠 Yang Tzu-Yun | 作品集</title>
+<style>
+  :root{
+    --navy:#0f1f3d;
+    --navy-deep:#0a1530;
+    --gold:#c9a24b;
+    --teal:#2f7d7d;
+    --ink:#1c2430;
+    --paper:#f7f5f0;
+    --card:#ffffff;
+    --muted:#5b6472;
+    --line:#e6e2d8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Noto Sans TC","Microsoft JhengHei",-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.75;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;border-radius:8px;}
+
+  /* ---------- Top nav ---------- */
+  nav.topnav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(247,245,240,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0.85rem 1.5rem;
+    font-size:0.88rem;
+  }
+  nav.topnav .name{font-weight:700;color:var(--navy);}
+  nav.topnav .links{display:flex;gap:1.3rem;flex-wrap:wrap;}
+  nav.topnav .links a{color:var(--muted);border-bottom:1px solid transparent;padding-bottom:2px;}
+  nav.topnav .links a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+
+  /* ---------- Hero ---------- */
+  header.hero{
+    background:var(--navy-deep);
+    color:#fff;
+    padding:4.5rem 1.5rem 3.5rem;
+    text-align:left;
+  }
+  header.hero .inner{max-width:960px;margin:0 auto;}
+  header.hero h1{
+    font-size:clamp(1.8rem,4vw,2.6rem);
+    font-weight:700;
+    margin-bottom:0.6rem;
+  }
+  header.hero p.role{
+    font-size:1.02rem;
+    color:#c3cad9;
+    max-width:640px;
+  }
+  header.hero p.skills{
+    margin-top:1.4rem;
+    font-size:0.88rem;
+    color:#9aa4b8;
+  }
+
+  /* ---------- Section shell ---------- */
+  main{max-width:960px;margin:0 auto;padding:0 1.5rem;}
+  section.block{padding:4rem 0;border-bottom:1px solid var(--line);}
+  section.block:last-of-type{border-bottom:none;}
+  .section-head{margin-bottom:2rem;}
+  .section-head .num{
+    color:var(--muted);
+    font-size:0.8rem;
+  }
+  .section-head h2{
+    font-size:1.6rem;
+    margin-top:0.3rem;
+  }
+
+  /* ---------- Project content (no card box) ---------- */
+  .project{
+    margin-bottom:2.5rem;
+    padding-bottom:2.5rem;
+    border-bottom:1px solid var(--line);
+  }
+  .project:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+  .project-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:1rem;
+    margin-bottom:1rem;
+  }
+  .project h3{font-size:1.35rem;color:var(--navy);}
+  .project .meta{font-size:0.85rem;color:var(--muted);margin-top:0.25rem;}
+  .stack{font-size:0.8rem;color:var(--muted);}
+  .project p.desc{color:var(--ink);margin:1rem 0;}
+  .shots{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1.4rem;
+    margin-top:1.4rem;
+  }
+  .shot-placeholder{
+    line-height:0;
+  }
+  .shots img{
+    width:auto;
+    max-width:100%;
+    max-height:640px;
+    border-radius:6px;
+    box-shadow:0 6px 18px rgba(15,31,61,0.1);
+    transition:transform .4s ease, box-shadow .4s ease;
+  }
+  .shots img:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 26px rgba(15,31,61,0.16);
+  }
+
+  /* ---------- Reveal animation ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--navy-deep);
+    color:#cfd6e4;
+    text-align:center;
+    padding:3rem 1.5rem;
+    font-size:0.9rem;
+  }
+  footer .gold{color:var(--gold);}
+  footer a.contact{
+    display:inline-block;
+    margin-top:0.6rem;
+    color:#fff;
+    border-bottom:1px solid var(--gold);
+  }
+
+  @media (max-width:640px){
+    section.block{padding:3rem 0;}
+    .project{padding:1.4rem;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="name">楊紫筠</span>
+  <div class="links">
+    <a href="#giftsense">GiftSense</a>
+    <a href="#railway">鐵道守護眼</a>
+    <a href="#medisea">海事智醫鏈</a>
+    <a href="#community">新聚點</a>
+    <a href="#cakeshop">CakeShop</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="inner">
+    <h1>楊紫筠 Yang Tzu-Yun</h1>
+    <p class="role">中原大學資訊管理學系｜擅長把課堂所學整合成能實際運作的系統，兼具專案管理與開發實作能力</p>
+    <p class="skills">HTML · CSS · JavaScript · Java · Python · Flutter · Firebase · SQL · Trigger · LINE Bot API · Gemini · GPT-4o Vision · GitHub</p>
+  </div>
+</header>
+
+<main>
+
+  <section class="block reveal" id="giftsense">
+    <div class="section-head">
+      <div class="num">畢業專題</div>
+      <h2>GiftSense｜心意，醫觸即達</h2>
+    </div>
+    <div class="project reveal">
+      <div class="project-top">
+        <div>
+          <h3>GiftSense — AI 醫療情境送禮推薦 APP</h3>
+          <div class="meta">畢業專題｜專題組長｜2026 / 06 目標完成 MVP</div>
+        </div>
+        <div class="stack">Flutter · Firebase · Gemini API</div>
+      </div>
+      <p class="desc">
+        台灣首個結合 AI 與醫療知識的送禮推薦 APP，解決探病送禮常誤送不適合病患商品的問題。
+        擔任專題組長，統籌整體專案進度與組員分工，負責企劃書撰寫（ER Model、DFD、BMC、甘特圖）。
+      </p>
+      <div class="shots">
+        <div class="shot-placeholder"><img src="images/g1.png" alt="GiftSense App 首頁"></div>
+        <div class="shot-placeholder"><img src="images/g2.png" alt="GiftSense 帳號與回饋點數頁"></div>
+        <div class="shot-placeholder"><img src="images/g3.png" alt="GiftSense 帳戶管理與其他設定"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal" id="railway">
+    <div class="section-head">
+      <div class="num">軟體專案管理課程專題</div>
+      <h2>鐵道守護眼 Railway Sentinel</h2>
+    </div>
+    <div class="project reveal">
+      <div class="project-top">
+        <div>
+          <h3>鐵道守護眼 — AI 影像辨識鐵道異常回報系統</h3>
+          <div class="meta">軟體專案管理課程專題｜專案管理 + 主力開發｜Demo 2026 / 06</div>
+        </div>
+        <div class="stack">Flutter · GPT-4o Vision · Firebase · Google Maps · TDX API</div>
+      </div>
+      <p class="desc">
+        一人身兼專案管理與主力開發：時程規劃、風險評估、資源分配、人力協調，到實際程式開發全部參與。
+        整合 GPT-4o Vision 影像辨識、即時地圖與台鐵官方 TDX API，讓民眾能即時回報並查看鐵道異常狀況。
+      </p>
+      <div class="shots">
+        <div class="shot-placeholder"><img src="images/train_map_detail.png" alt="鐵道守護眼 異常地圖與回報詳情"></div>
+        <div class="shot-placeholder"><img src="images/train_report_ai.png" alt="鐵道守護眼 拍照回報與 AI 嚴重度分析"></div>
+        <div class="shot-placeholder"><img src="images/train_photowall.png" alt="鐵道守護眼 照片牆回報紀錄"></div>
+        <div class="shot-placeholder"><img src="images/train_workorder.png" alt="鐵道守護眼 專案管理派工單"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal" id="medisea">
+    <div class="section-head">
+      <div class="num">2025 衛星數位應用創新大賽</div>
+      <h2>海事智醫鏈 MediLink-Sea</h2>
+    </div>
+    <div class="project reveal">
+      <div class="project-top">
+        <div>
+          <h3>海事智醫鏈 — 衛星遠洋醫療解決方案</h3>
+          <div class="meta">2025 衛星數位應用創新大賽｜團隊「海洋智醫隊」｜額外自行組隊參賽</div>
+        </div>
+        <div class="stack">Edge AI · 衛星通訊 · IoT 生理量測 · Python POC</div>
+      </div>
+      <p class="desc">
+        解決遠洋船員在低頻寬海上環境下無法即時取得可判讀醫療影像的問題，結合衛星通訊、Edge AI 與 IoT 生理量測。
+        參與需求分析（海事醫療現況、國際死因統計研究）、技術可行性評估（AI 影像壓縮、離線 AI 檢傷）到概念性驗證（POC 測試，含離線 AI 推論實測）的完整流程。
+      </p>
+      <div class="shots">
+        <div class="shot-placeholder"><img src="images/medisea_diagram.png" alt="MediLink-Sea 資料流程示意圖"></div>
+        <div class="shot-placeholder"><img src="images/medisea_poc.png" alt="MediLink-Sea POC 概念性驗證測試結果"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal" id="community">
+    <div class="section-head">
+      <div class="num">資訊管理課程專題</div>
+      <h2>新聚點 — AI 智慧新住民服務平台</h2>
+    </div>
+    <div class="project reveal">
+      <div class="project-top">
+        <div>
+          <h3>新聚點 — AI 智慧新住民服務平台</h3>
+          <div class="meta">資訊管理課程專題｜組長，主導開發與書面報告｜正式 Demo 2026 / 06</div>
+        </div>
+        <div class="stack">LINE Bot · Flask · Whisper 語音辨識 · 五語言介面</div>
+      </div>
+      <p class="desc">
+        服務新住民與外籍移工的多語言資訊平台，整合 LINE Bot、語音辨識與地圖找資源功能，
+        支援中、越、印尼、菲律賓、泰語五種語言介面。
+      </p>
+      <div class="shots">
+        <div class="shot-placeholder"><img src="images/1.png" alt="新聚點 網站首頁"></div>
+        <div class="shot-placeholder"><img src="images/2.png" alt="新聚點 政策公告"></div>
+        <div class="shot-placeholder"><img src="images/3.png" alt="新聚點 防詐安全專區"></div>
+        <div class="shot-placeholder"><img src="images/4.png" alt="新聚點 資源地圖"></div>
+        <div class="shot-placeholder"><img src="images/6.png" alt="新聚點 LINE Bot 語言設定與功能選單"></div>
+        <div class="shot-placeholder"><img src="images/7.png" alt="新聚點 LINE Bot 緊急聯絡資訊"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block reveal" id="cakeshop">
+    <div class="section-head">
+      <div class="num">網路程式設計 + 資料庫管理課程專題</div>
+      <h2>CakeShop — 手作蛋糕電子商店</h2>
+    </div>
+    <div class="project reveal">
+      <div class="project-top">
+        <div>
+          <h3>CakeShop — 手作蛋糕電子商店</h3>
+          <div class="meta">網路程式設計 + 資料庫管理課程專題｜組長，主導開發與書面報告</div>
+        </div>
+        <div class="stack">JSP · MySQL · Trigger · 預存程序</div>
+      </div>
+      <p class="desc">
+        完整電商網站：商品搜尋、購物車、結帳扣庫存、留言板、後台管理、SQL Injection 防護等七項基本功能
+        與五項延伸功能；資料庫加強版另外設計 Trigger 與預存程序等進階功能。
+      </p>
+      <div class="shots">
+        <div class="shot-placeholder"><img src="images/c1.png" alt="CakeShop 網站首頁"></div>
+        <div class="shot-placeholder"><img src="images/c2.png" alt="CakeShop 商品列表"></div>
+        <div class="shot-placeholder"><img src="images/c3.png" alt="CakeShop 確認訂單頁"></div>
+        <div class="shot-placeholder"><img src="images/c4.png" alt="CakeShop 後台商品管理"></div>
+        <div class="shot-placeholder"><img src="images/cc.png" alt="CakeShop 資料庫 Trigger 與預存程序執行結果"></div>
+        <div class="shot-placeholder"><img src="images/c.png" alt="CakeShop 資料庫 ER Model"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>感謝你的閱讀 <span class="gold">·</span> Thanks for visiting</div>
+  <a class="contact" href="mailto:vivianyang312@gmail.com">vivianyang312@gmail.com</a>
+</footer>
+
+<script>
+  const items = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:0.12});
+  items.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
