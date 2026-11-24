@@ -2,333 +2,213 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>楊紫筠 Yang Tzu-Yun | 作品集</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楊紫筠 Vivian Yang｜作品集</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --navy:#0f1f3d;
-    --navy-deep:#0a1530;
-    --gold:#c9a24b;
-    --teal:#2f7d7d;
-    --ink:#1c2430;
-    --paper:#f7f5f0;
-    --card:#ffffff;
-    --muted:#5b6472;
-    --line:#e6e2d8;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:"Noto Sans TC","Microsoft JhengHei",-apple-system,BlinkMacSystemFont,sans-serif;
-    background:var(--paper);
-    color:var(--ink);
-    line-height:1.75;
-  }
-  a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;border-radius:8px;}
+:root{--bg:#F7F4EE;--ink:#2B2A27;--sub:#5F5D57;--muted:#8C8981;--line:#CFC9BD;--accent:#8A2D2D;--card:#EDE8DE}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans TC",system-ui,sans-serif;font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+.serif{font-family:"Noto Serif TC",serif;font-weight:600}
+header{position:sticky;top:0;background:rgba(247,244,238,.94);border-bottom:1px solid var(--line);z-index:10}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:56px;font-size:14px}
+header nav a{text-decoration:none;color:var(--sub);margin-left:22px}
+header nav a:hover{color:var(--accent)}
+.hero{padding:96px 0 72px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:44px;line-height:1.35;letter-spacing:.02em;margin-bottom:22px}
+.hero p{color:var(--sub);max-width:620px}
+.hero .meta{margin-top:30px;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:14px;color:var(--muted)}
+.hero .meta b{font-weight:500;color:var(--ink);margin-right:6px}
+.label{font-size:13px;color:var(--accent);letter-spacing:.06em;margin-bottom:18px}
+section.proj{padding:72px 0;border-bottom:1px solid var(--line)}
+.proj-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
+.proj h2{font-size:30px;line-height:1.4;margin-bottom:14px}
+.proj .lead{color:var(--sub);margin-bottom:22px}
+.proj dl{font-size:15px}
+.proj dt{font-size:12px;color:var(--muted);letter-spacing:.08em;margin-top:16px}
+.proj dd{color:var(--ink)}
+.proj ul{padding-left:1.1em}
+.tech{margin-top:20px;font-size:13px;color:var(--muted)}
+.link{display:inline-block;margin-top:20px;font-size:14px;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent)}
+figure{margin:0}
+.carousel{position:relative}
+.carousel .slide{display:none}
+.carousel .slide.on{display:block;animation:fade .5s}
+.carousel .shot{height:360px}
+@keyframes fade{from{opacity:.3}to{opacity:1}}
+.cf .stage{position:relative;height:400px;perspective:1000px;overflow:hidden}
+.cf .slide{display:block;position:absolute;left:50%;top:0;width:62%;margin-left:-40%;transition:transform .6s ease,opacity .6s ease;opacity:0;pointer-events:none;z-index:0}
+.cf .slide.on{animation:none}
+.cf .slide figcaption{display:none}
+.cf .shot{height:380px;background:transparent;border:none;padding:0}
+.cf .shot img{border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.cf .slide[data-p="0"]{transform:none;opacity:1;z-index:3;pointer-events:auto}
+.cf .slide[data-p="1"]{transform:translateX(38%) scale(.82);opacity:.55;z-index:2;pointer-events:auto}
+.cf .cap{font-size:13px;color:var(--sub);text-align:center;margin-top:10px;min-height:1.6em}
+@media(max-width:760px){.cf .stage{height:320px}.cf .shot{height:300px}}
+.ctrl{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:10px}
+.ctrl button{background:none;border:1px solid var(--line);border-radius:50%;width:30px;height:30px;color:var(--sub);cursor:pointer;font-size:18px;line-height:1}
+.ctrl button:hover{border-color:var(--accent);color:var(--accent)}
+.dots{display:flex;gap:7px}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--line);cursor:pointer}
+.dots i.on{background:var(--accent)}
 
-  /* ---------- Top nav ---------- */
-  nav.topnav{
-    position:sticky;
-    top:0;
-    z-index:50;
-    background:rgba(247,245,240,0.92);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line);
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0.85rem 1.5rem;
-    font-size:0.88rem;
-  }
-  nav.topnav .name{font-weight:700;color:var(--navy);}
-  nav.topnav .links{display:flex;gap:1.3rem;flex-wrap:wrap;}
-  nav.topnav .links a{color:var(--muted);border-bottom:1px solid transparent;padding-bottom:2px;}
-  nav.topnav .links a:hover{color:var(--navy);border-bottom-color:var(--gold);}
-
-  /* ---------- Hero ---------- */
-  header.hero{
-    background:var(--navy-deep);
-    color:#fff;
-    padding:4.5rem 1.5rem 3.5rem;
-    text-align:left;
-  }
-  header.hero .inner{max-width:960px;margin:0 auto;}
-  header.hero h1{
-    font-size:clamp(1.8rem,4vw,2.6rem);
-    font-weight:700;
-    margin-bottom:0.6rem;
-  }
-  header.hero p.role{
-    font-size:1.02rem;
-    color:#c3cad9;
-    max-width:640px;
-  }
-  header.hero p.skills{
-    margin-top:1.4rem;
-    font-size:0.88rem;
-    color:#9aa4b8;
-  }
-
-  /* ---------- Section shell ---------- */
-  main{max-width:960px;margin:0 auto;padding:0 1.5rem;}
-  section.block{padding:4rem 0;border-bottom:1px solid var(--line);}
-  section.block:last-of-type{border-bottom:none;}
-  .section-head{margin-bottom:2rem;}
-  .section-head .num{
-    color:var(--muted);
-    font-size:0.8rem;
-  }
-  .section-head h2{
-    font-size:1.6rem;
-    margin-top:0.3rem;
-  }
-
-  /* ---------- Project content (no card box) ---------- */
-  .project{
-    margin-bottom:2.5rem;
-    padding-bottom:2.5rem;
-    border-bottom:1px solid var(--line);
-  }
-  .project:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-  .project-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    flex-wrap:wrap;
-    gap:1rem;
-    margin-bottom:1rem;
-  }
-  .project h3{font-size:1.35rem;color:var(--navy);}
-  .project .meta{font-size:0.85rem;color:var(--muted);margin-top:0.25rem;}
-  .stack{font-size:0.8rem;color:var(--muted);}
-  .project p.desc{color:var(--ink);margin:1rem 0;}
-  .shots{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:1.4rem;
-    margin-top:1.4rem;
-  }
-  .shot-placeholder{
-    line-height:0;
-  }
-  .shots img{
-    width:auto;
-    max-width:100%;
-    max-height:640px;
-    border-radius:6px;
-    box-shadow:0 6px 18px rgba(15,31,61,0.1);
-    transition:transform .4s ease, box-shadow .4s ease;
-  }
-  .shots img:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 26px rgba(15,31,61,0.16);
-  }
-
-  /* ---------- Reveal animation ---------- */
-  .reveal{
-    opacity:0;
-    transform:translateY(24px);
-    transition:opacity .7s ease, transform .7s ease;
-  }
-  .reveal.in{opacity:1;transform:translateY(0);}
-
-  /* ---------- Footer ---------- */
-  footer{
-    background:var(--navy-deep);
-    color:#cfd6e4;
-    text-align:center;
-    padding:3rem 1.5rem;
-    font-size:0.9rem;
-  }
-  footer .gold{color:var(--gold);}
-  footer a.contact{
-    display:inline-block;
-    margin-top:0.6rem;
-    color:#fff;
-    border-bottom:1px solid var(--gold);
-  }
-
-  @media (max-width:640px){
-    section.block{padding:3rem 0;}
-    .project{padding:1.4rem;}
-  }
+.shot{height:220px;display:flex;align-items:center;justify-content:center;cursor:zoom-in}
+.shot img{max-width:100%;max-height:100%;object-fit:contain;display:block;border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+figcaption{font-size:13px;color:var(--sub);margin-top:8px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px 20px;margin-top:32px}
+.textcard{background:var(--card);border-radius:4px;padding:36px 32px;font-size:15px;color:var(--sub)}
+.textcard .big{font-family:"Noto Serif TC",serif;font-size:22px;color:var(--ink);line-height:1.5;margin-bottom:14px}
+.about{padding:80px 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px}
+.about h2{font-size:28px}
+.about p{color:var(--sub);margin-bottom:14px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:10px;font-size:14px}
+.skills h3{font-size:12px;color:var(--muted);font-weight:400;letter-spacing:.08em;margin-bottom:4px}
+footer{border-top:1px solid var(--line);padding:40px 0 60px;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+#lb{position:fixed;inset:0;background:rgba(30,28,25,.88);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
+#lb img{max-width:100%;max-height:100%;border-radius:4px}
+@media(max-width:760px){
+.hero{padding:60px 0 48px}.hero h1{font-size:32px}
+.proj-head,.about{grid-template-columns:1fr;gap:28px}
+section.proj{padding:52px 0}.proj h2{font-size:25px}
+header nav a{margin-left:14px}header nav a.hide-m{display:none}
+.carousel .shot{height:260px}}
 </style>
 </head>
 <body>
 
-<nav class="topnav">
-  <span class="name">楊紫筠</span>
-  <div class="links">
-    <a href="#giftsense">GiftSense</a>
-    <a href="#railway">鐵道守護眼</a>
-    <a href="#medisea">海事智醫鏈</a>
-    <a href="#community">新聚點</a>
-    <a href="#cakeshop">CakeShop</a>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="inner">
-    <h1>楊紫筠 Yang Tzu-Yun</h1>
-    <p class="role">中原大學資訊管理學系｜擅長把課堂所學整合成能實際運作的系統，兼具專案管理與開發實作能力</p>
-    <p class="skills">HTML · CSS · JavaScript · Java · Python · Flutter · Firebase · SQL · Trigger · LINE Bot API · Gemini · GPT-4o Vision · GitHub</p>
-  </div>
-</header>
+<header><div class="wrap">
+<span class="serif">楊紫筠 Vivian Yang</span>
+<nav><a href="#work">作品</a><a href="#about" class="hide-m">關於</a><a href="mailto:vivianyang312@gmail.com">聯絡</a></nav>
+</div></header>
 
 <main>
+<div class="wrap">
+<section class="hero">
+<p class="label">PORTFOLIO</p>
+<h1 class="serif">從聽懂需求開始，<br>把想法做成能用的系統。</h1>
+<p>我是楊紫筠，中原大學資訊管理學系大四，輔修財經法律。大學期間做過多個專題，大多擔任組長，負責需求分析、系統規劃、帶領開發到上台報告。這裡整理了其中幾個。</p>
+<div class="meta">
+<span><b>學校</b>中原大學 資訊管理學系（2027 年 6 月畢業）</span>
+<span><b>實習</b>正大聯合會計師事務所</span>
+<span><b>Email</b><a href="mailto:vivianyang312@gmail.com">vivianyang312@gmail.com</a></span>
+</div>
+</section>
+</div>
 
-  <section class="block reveal" id="giftsense">
-    <div class="section-head">
-      <div class="num">畢業專題</div>
-      <h2>GiftSense｜心意，醫觸即達</h2>
-    </div>
-    <div class="project reveal">
-      <div class="project-top">
-        <div>
-          <h3>GiftSense — AI 醫療情境送禮推薦 APP</h3>
-          <div class="meta">畢業專題｜專題組長｜2026 / 06 目標完成 MVP</div>
-        </div>
-        <div class="stack">Flutter · Firebase · Gemini API</div>
-      </div>
-      <p class="desc">
-        台灣首個結合 AI 與醫療知識的送禮推薦 APP，解決探病送禮常誤送不適合病患商品的問題。
-        擔任專題組長，統籌整體專案進度與組員分工，負責企劃書撰寫（ER Model、DFD、BMC、甘特圖）。
-      </p>
-      <div class="shots">
-        <div class="shot-placeholder"><img src="images/g1.png" alt="GiftSense App 首頁"></div>
-        <div class="shot-placeholder"><img src="images/g2.png" alt="GiftSense 帳號與回饋點數頁"></div>
-        <div class="shot-placeholder"><img src="images/g3.png" alt="GiftSense 帳戶管理與其他設定"></div>
-      </div>
-    </div>
-  </section>
+<div class="wrap" id="work">
 
-  <section class="block reveal" id="railway">
-    <div class="section-head">
-      <div class="num">軟體專案管理課程專題</div>
-      <h2>鐵道守護眼 Railway Sentinel</h2>
-    </div>
-    <div class="project reveal">
-      <div class="project-top">
-        <div>
-          <h3>鐵道守護眼 — AI 影像辨識鐵道異常回報系統</h3>
-          <div class="meta">軟體專案管理課程專題｜專案管理 + 主力開發｜Demo 2026 / 06</div>
-        </div>
-        <div class="stack">Flutter · GPT-4o Vision · Firebase · Google Maps · TDX API</div>
-      </div>
-      <p class="desc">
-        一人身兼專案管理與主力開發：時程規劃、風險評估、資源分配、人力協調，到實際程式開發全部參與。
-        整合 GPT-4o Vision 影像辨識、即時地圖與台鐵官方 TDX API，讓民眾能即時回報並查看鐵道異常狀況。
-      </p>
-      <div class="shots">
-        <div class="shot-placeholder"><img src="images/train_map_detail.png" alt="鐵道守護眼 異常地圖與回報詳情"></div>
-        <div class="shot-placeholder"><img src="images/train_report_ai.png" alt="鐵道守護眼 拍照回報與 AI 嚴重度分析"></div>
-        <div class="shot-placeholder"><img src="images/train_photowall.png" alt="鐵道守護眼 照片牆回報紀錄"></div>
-        <div class="shot-placeholder"><img src="images/train_workorder.png" alt="鐵道守護眼 專案管理派工單"></div>
-      </div>
-    </div>
-  </section>
+<section class="proj" id="giftsense">
+<div class="proj-head">
+<div>
+<p class="label">01 · 畢業專題 · 2026</p>
+<h2 class="serif">GiftSense 心意，醫觸即達</h2>
+<p class="lead">子女想送保健品關心長輩，卻不知道會不會跟長輩吃的藥衝突。GiftSense 在推薦商品之前，先用實證文獻和交互作用規則比對長輩的病況與用藥，確認安全才推薦，並透過 LINE 每天送出關懷卡。</p>
+<p class="tech">Flutter · Python FastAPI · RAG · LINE Messaging API · 中央氣象署 API</p>
+</div>
+<div class="carousel cf"><div class="stage"><figure class="slide"><div class="shot"><img src="images/gs_home.jpg" alt="今日守護：依天氣產生關懷叮嚀，3 秒送出關懷卡" loading="lazy"></div><figcaption>今日守護：依天氣產生關懷叮嚀，3 秒送出關懷卡</figcaption></figure><figure class="slide"><div class="shot"><img src="images/gs_ai.jpg" alt="AI 守護助理：依親友狀況提問，比對文獻與用藥" loading="lazy"></div><figcaption>AI 守護助理：依親友狀況提問，比對文獻與用藥</figcaption></figure><figure class="slide"><div class="shot"><img src="images/gs_shop.jpg" alt="暖心選物：推薦安全的保健品，並比較連鎖藥局價格" loading="lazy"></div><figcaption>暖心選物：推薦安全的保健品，並比較連鎖藥局價格</figcaption></figure><figure class="slide"><div class="shot"><img src="images/gs_family.jpg" alt="親友健康資料庫：設定病況並綁定 LINE" loading="lazy"></div><figcaption>親友健康資料庫：設定病況並綁定 LINE</figcaption></figure></div><p class="cap"></p><div class="ctrl"><button class="prev" aria-label="上一張">‹</button><span class="dots"></span><button class="next" aria-label="下一張">›</button></div></div>
+</div>
+</section>
 
-  <section class="block reveal" id="medisea">
-    <div class="section-head">
-      <div class="num">2025 衛星數位應用創新大賽</div>
-      <h2>海事智醫鏈 MediLink-Sea</h2>
-    </div>
-    <div class="project reveal">
-      <div class="project-top">
-        <div>
-          <h3>海事智醫鏈 — 衛星遠洋醫療解決方案</h3>
-          <div class="meta">2025 衛星數位應用創新大賽｜團隊「海洋智醫隊」｜額外自行組隊參賽</div>
-        </div>
-        <div class="stack">Edge AI · 衛星通訊 · IoT 生理量測 · Python POC</div>
-      </div>
-      <p class="desc">
-        解決遠洋船員在低頻寬海上環境下無法即時取得可判讀醫療影像的問題，結合衛星通訊、Edge AI 與 IoT 生理量測。
-        參與需求分析（海事醫療現況、國際死因統計研究）、技術可行性評估（AI 影像壓縮、離線 AI 檢傷）到概念性驗證（POC 測試，含離線 AI 推論實測）的完整流程。
-      </p>
-      <div class="shots">
-        <div class="shot-placeholder"><img src="images/medisea_diagram.png" alt="MediLink-Sea 資料流程示意圖"></div>
-        <div class="shot-placeholder"><img src="images/medisea_poc.png" alt="MediLink-Sea POC 概念性驗證測試結果"></div>
-      </div>
-    </div>
-  </section>
+<section class="proj" id="railway">
+<div class="proj-head">
+<div>
+<p class="label">02 · 軟體專案管理課程 · 2026</p>
+<h2 class="serif">鐵道守護眼</h2>
+<p class="lead">民眾看到鐵道異常時拍照回報，系統用 GPT-4o Vision 判斷狀況，並結合台鐵官方 TDX 資料，把回報即時標在地圖上，再轉成維修工單。</p>
+<p class="tech">Flutter · GPT-4o Vision · Firebase · Google Maps · TDX API</p>
+</div>
+<div class="carousel cf"><div class="stage"><figure class="slide"><div class="shot"><img src="images/train_map_detail.png" alt="異常地圖：官方公告與民眾回報標在鐵道路線上" loading="lazy"></div><figcaption>異常地圖：官方公告與民眾回報標在鐵道路線上</figcaption></figure><figure class="slide"><div class="shot"><img src="images/train_report_ai.png" alt="回報問題：上傳照片後由 AI 判斷嚴重程度" loading="lazy"></div><figcaption>回報問題：上傳照片後由 AI 判斷嚴重程度</figcaption></figure><figure class="slide"><div class="shot"><img src="images/train_photowall.png" alt="照片牆：瀏覽各地的回報照片" loading="lazy"></div><figcaption>照片牆：瀏覽各地的回報照片</figcaption></figure><figure class="slide"><div class="shot"><img src="images/train_workorder.png" alt="派工單：把回報轉成維修工作單" loading="lazy"></div><figcaption>派工單：把回報轉成維修工作單</figcaption></figure></div><p class="cap"></p><div class="ctrl"><button class="prev" aria-label="上一張">‹</button><span class="dots"></span><button class="next" aria-label="下一張">›</button></div></div>
+</div>
+</section>
 
-  <section class="block reveal" id="community">
-    <div class="section-head">
-      <div class="num">資訊管理課程專題</div>
-      <h2>新聚點 — AI 智慧新住民服務平台</h2>
-    </div>
-    <div class="project reveal">
-      <div class="project-top">
-        <div>
-          <h3>新聚點 — AI 智慧新住民服務平台</h3>
-          <div class="meta">資訊管理課程專題｜組長，主導開發與書面報告｜正式 Demo 2026 / 06</div>
-        </div>
-        <div class="stack">LINE Bot · Flask · Whisper 語音辨識 · 五語言介面</div>
-      </div>
-      <p class="desc">
-        服務新住民與外籍移工的多語言資訊平台，整合 LINE Bot、語音辨識與地圖找資源功能，
-        支援中、越、印尼、菲律賓、泰語五種語言介面。
-      </p>
-      <div class="shots">
-        <div class="shot-placeholder"><img src="images/1.png" alt="新聚點 網站首頁"></div>
-        <div class="shot-placeholder"><img src="images/2.png" alt="新聚點 政策公告"></div>
-        <div class="shot-placeholder"><img src="images/3.png" alt="新聚點 防詐安全專區"></div>
-        <div class="shot-placeholder"><img src="images/4.png" alt="新聚點 資源地圖"></div>
-        <div class="shot-placeholder"><img src="images/6.png" alt="新聚點 LINE Bot 語言設定與功能選單"></div>
-        <div class="shot-placeholder"><img src="images/7.png" alt="新聚點 LINE Bot 緊急聯絡資訊"></div>
-      </div>
-    </div>
-  </section>
 
-  <section class="block reveal" id="cakeshop">
-    <div class="section-head">
-      <div class="num">網路程式設計 + 資料庫管理課程專題</div>
-      <h2>CakeShop — 手作蛋糕電子商店</h2>
-    </div>
-    <div class="project reveal">
-      <div class="project-top">
-        <div>
-          <h3>CakeShop — 手作蛋糕電子商店</h3>
-          <div class="meta">網路程式設計 + 資料庫管理課程專題｜組長，主導開發與書面報告</div>
-        </div>
-        <div class="stack">JSP · MySQL · Trigger · 預存程序</div>
-      </div>
-      <p class="desc">
-        完整電商網站：商品搜尋、購物車、結帳扣庫存、留言板、後台管理、SQL Injection 防護等七項基本功能
-        與五項延伸功能；資料庫加強版另外設計 Trigger 與預存程序等進階功能。
-      </p>
-      <div class="shots">
-        <div class="shot-placeholder"><img src="images/c1.png" alt="CakeShop 網站首頁"></div>
-        <div class="shot-placeholder"><img src="images/c2.png" alt="CakeShop 商品列表"></div>
-        <div class="shot-placeholder"><img src="images/c3.png" alt="CakeShop 確認訂單頁"></div>
-        <div class="shot-placeholder"><img src="images/c4.png" alt="CakeShop 後台商品管理"></div>
-        <div class="shot-placeholder"><img src="images/cc.png" alt="CakeShop 資料庫 Trigger 與預存程序執行結果"></div>
-        <div class="shot-placeholder"><img src="images/c.png" alt="CakeShop 資料庫 ER Model"></div>
-      </div>
-    </div>
-  </section>
+<section class="proj" id="community">
+<div class="proj-head">
+<div>
+<p class="label">03 · 資訊管理課程 · 2026</p>
+<h2 class="serif">新聚點 AI 智慧新住民服務平台</h2>
+<p class="lead">給新住民與外籍移工用的多語言資訊平台。透過 LINE Bot 就能用語音發問、查政策公告、在地圖上找附近資源，介面支援中、越、印尼、菲律賓、泰語。</p>
+<p class="tech">LINE Bot · Flask · Whisper 語音辨識 · 多語言介面</p>
+</div>
+<div class="carousel"><figure class="slide"><div class="shot"><img src="images/2.png" alt="政策公告：整理新住民相關的最新資訊" loading="lazy"></div><figcaption>政策公告：整理新住民相關的最新資訊</figcaption></figure><figure class="slide"><div class="shot"><img src="images/1.png" alt="網站首頁：服務入口與政策公告" loading="lazy"></div><figcaption>網站首頁：服務入口與政策公告</figcaption></figure><figure class="slide"><div class="shot"><img src="images/3.png" alt="防詐安全專區與資源地圖" loading="lazy"></div><figcaption>防詐安全專區與資源地圖</figcaption></figure><figure class="slide"><div class="shot"><img src="images/4.png" alt="資源地圖：查詢附近的服務據點" loading="lazy"></div><figcaption>資源地圖：查詢附近的服務據點</figcaption></figure><figure class="slide"><div class="shot"><img src="images/6.png" alt="LINE Bot：AI 助理回答生活問題" loading="lazy"></div><figcaption>LINE Bot：AI 助理回答生活問題</figcaption></figure><figure class="slide"><div class="shot"><img src="images/7.png" alt="LINE Bot：一鍵查詢緊急求助電話" loading="lazy"></div><figcaption>LINE Bot：一鍵查詢緊急求助電話</figcaption></figure><div class="ctrl"><button class="prev" aria-label="上一張">‹</button><span class="dots"></span><button class="next" aria-label="下一張">›</button></div></div>
+</div>
+</section>
 
+<section class="proj" id="medisea">
+<div class="proj-head">
+<div>
+<p class="label">04 · 2025 衛星數位應用創新大賽</p>
+<h2 class="serif">海事智醫鏈 MediLink-Sea</h2>
+<p class="lead">遠洋船員生病時，船上網路頻寬很低，醫療影像傳不出去。提出結合衛星通訊、Edge AI 與 IoT 生理量測的方案，讓船上能先做初步判讀，再把壓縮後的資料傳回岸上。實測壓縮後的影像傳輸時間能縮短到原本的數十分之一。</p>
+<p class="tech">Edge AI · 衛星通訊 · IoT · Python</p>
+</div>
+<div class="carousel"><figure class="slide"><div class="shot"><img src="images/medisea_diagram.png" alt="資料流程：從船員、船上 Edge AI、衛星鏈路到陸上醫師" loading="lazy"></div><figcaption>資料流程：從船員、船上 Edge AI、衛星鏈路到陸上醫師</figcaption></figure><figure class="slide"><div class="shot"><img src="images/medisea_poc.png" alt="概念驗證結果：影像壓縮前後的傳輸時間比較" loading="lazy"></div><figcaption>概念驗證結果：影像壓縮前後的傳輸時間比較</figcaption></figure><div class="ctrl"><button class="prev" aria-label="上一張">‹</button><span class="dots"></span><button class="next" aria-label="下一張">›</button></div></div>
+</div>
+</section>
+
+<section class="proj" id="cakeshop">
+<div class="proj-head">
+<div>
+<p class="label">05 · 網路程式設計 + 資料庫管理</p>
+<h2 class="serif">CakeShop 手作蛋糕電子商店</h2>
+<p class="lead">完整的電商網站：商品搜尋、購物車、結帳扣庫存、留言板與後台管理，也做了 SQL Injection 防護。資料庫課的加強版另外用 Trigger 與預存程序處理庫存與訂單。</p>
+<p class="tech">JSP · MySQL · Trigger · 預存程序</p>
+</div>
+<div class="carousel"><figure class="slide"><div class="shot"><img src="images/c1.png" alt="商店首頁" loading="lazy"></div><figcaption>商店首頁</figcaption></figure><figure class="slide"><div class="shot"><img src="images/c2.png" alt="商品列表與搜尋" loading="lazy"></div><figcaption>商品列表與搜尋</figcaption></figure><figure class="slide"><div class="shot"><img src="images/c3.png" alt="結帳：填寫取貨資訊" loading="lazy"></div><figcaption>結帳：填寫取貨資訊</figcaption></figure><figure class="slide"><div class="shot"><img src="images/c4.png" alt="後台：商品管理" loading="lazy"></div><figcaption>後台：商品管理</figcaption></figure><figure class="slide"><div class="shot"><img src="images/cc.png" alt="MySQL：Trigger 與預存程序測試" loading="lazy"></div><figcaption>MySQL：Trigger 與預存程序測試</figcaption></figure><figure class="slide"><div class="shot"><img src="images/c.png" alt="ER 圖：資料表與關聯設計" loading="lazy"></div><figcaption>ER 圖：資料表與關聯設計</figcaption></figure><div class="ctrl"><button class="prev" aria-label="上一張">‹</button><span class="dots"></span><button class="next" aria-label="下一張">›</button></div></div>
+</div>
+</section>
+
+</div>
+
+<div class="wrap">
+<section class="about" id="about">
+<div>
+<p class="label">ABOUT</p>
+<h2 class="serif">關於我</h2>
+</div>
+<div>
+<p>爸爸媽媽都在金融業的資訊部門工作，讓我很早就對金融業的資訊工作有興趣。除了資管的技術課程，我也修了經濟學、初級會計，並輔修財經法律，希望能從商業和法規的角度理解系統為什麼要這樣設計。</p>
+<p>開發時我會善用 AI 工具加快速度，同時也在持續把程式基礎打穩。未來想往金融資訊與資安方向發展，規劃考取 ISO 27001 等資安證照。</p>
+<div class="skills">
+<div><h3>程式語言</h3>Java、Python、JavaScript、SQL、Dart</div>
+<div><h3>框架與服務</h3>Flutter、Next.js、Firebase、Supabase、LINE Bot API</div>
+<div><h3>工具</h3>Git / GitHub、Vercel、MySQL Workbench、AI 輔助開發（Claude、ChatGPT、Gemini）</div>
+<div><h3>證照</h3>金融市場常識與職業道德</div>
+</div>
+</div>
+</section>
+</div>
 </main>
 
-<footer>
-  <div>感謝你的閱讀 <span class="gold">·</span> Thanks for visiting</div>
-  <a class="contact" href="mailto:vivianyang312@gmail.com">vivianyang312@gmail.com</a>
-</footer>
+<footer><div class="wrap">
+<span>楊紫筠 Vivian Yang · 2026</span>
+<span><a href="mailto:vivianyang312@gmail.com">vivianyang312@gmail.com</a></span>
+</div></footer>
 
+<div id="lb"><img alt=""></div>
 <script>
-  const items = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
-    });
-  },{threshold:0.12});
-  items.forEach(el=>io.observe(el));
+document.querySelectorAll('.carousel').forEach(c=>{
+const sl=[...c.querySelectorAll('.slide')],dots=c.querySelector('.dots');let i=0,t;
+if(sl.length<2)c.querySelector('.ctrl').style.display='none';
+sl.forEach((_,k)=>{const d=document.createElement('i');d.onclick=()=>{go(k);reset()};dots.appendChild(d)});
+const ds=[...dots.children];
+const cap=c.querySelector('.cap'),n=sl.length;
+function go(k){i=(k+n)%n;sl.forEach((x,j)=>{x.classList.toggle('on',j===i);let d=(j-i+n)%n;if(d>n/2)d-=n;x.dataset.p=(d===0||d===1)?d:'x';});ds.forEach((x,j)=>x.classList.toggle('on',j===i));if(cap)cap.textContent=sl[i].querySelector('figcaption').textContent}
+if(c.classList.contains('cf'))sl.forEach((x,j)=>x.addEventListener('click',e=>{if(j!==i){e.stopPropagation();go(j);reset()}},true));
+function reset(){clearInterval(t);t=setInterval(()=>go(i+1),3000)}
+c.querySelector('.prev').onclick=()=>{go(i-1);reset()};c.querySelector('.next').onclick=()=>{go(i+1);reset()};
+c.onmouseenter=()=>clearInterval(t);c.onmouseleave=reset;go(0);reset()});
+const lb=document.getElementById('lb'),li=lb.querySelector('img');
+document.querySelectorAll('.shot img').forEach(i=>i.addEventListener('click',()=>{li.src=i.src;li.alt=i.alt;lb.style.display='flex';}));
+lb.addEventListener('click',()=>{lb.style.display='none'});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.style.display='none'});
 </script>
-
 </body>
 </html>
